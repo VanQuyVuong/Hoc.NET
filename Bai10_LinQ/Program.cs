@@ -11,12 +11,19 @@ namespace Bai10_LinQ
             //Console.WriteLine("Hello, World!");
             Print(dataSource);
 
-            var ns = from n in dataSource
-                     where n >= 0
-                     select n;
+            //var ns = from n in dataSource
+            //         where  GreaterThan0(n)  && n%2==0//(n >= 0)
+            //         select n;
+            //Print(ns);
+
+            var ns = dataSource.Where(n => GreaterThan0(n) && n % 2 == 0);
             Print(ns);
         }
 
+        static bool GreaterThan0(int n)
+        {
+            return (n > 0);
+        }
 
         static IEnumerable<int> GetIntNumbers()
         {

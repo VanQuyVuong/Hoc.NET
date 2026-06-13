@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="Bai10_LinQ/Bai10_LinQ.csproj" Id="3008f531-c4f0-41dd-89ce-f6abc2dcf3e4" />
   <Project Path="Bai5_PhuongThuc/Bai5_PhuongThuc.csproj" Id="bfcaa534-a0da-4134-a547-bf6b03848ef7" />
   <Project Path="Bai6_ExceptionDemo/Bai6_ExceptionDemo.csproj" Id="477baab8-ebb3-41a7-a747-085d4c8cf6aa" />
   <Project Path="Bai7_Stream/Bai7_Stream.csproj" Id="43916449-3026-446c-a6f5-d854757d0a6b" />

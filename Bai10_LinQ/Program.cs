@@ -11,13 +11,21 @@ namespace Bai10_LinQ
             //Console.WriteLine("Hello, World!");
             Print(dataSource);
 
-            //var ns = from n in dataSource
-            //         where  GreaterThan0(n)  && n%2==0//(n >= 0)
-            //         select n;
+            var ns = from n in dataSource
+                     where GreaterThan0(n) && n % 2 == 0//(n >= 0)
+                     select n;
+            Print(ns);
+
+            //var ns = dataSource.Where(n => GreaterThan0(n) && n % 2 == 0);
+
+
             //Print(ns);
 
-            var ns = dataSource.Where(n => GreaterThan0(n) && n % 2 == 0);
-            Print(ns);
+            Console.WriteLine("----------------");
+
+            Console.WriteLine(ns.Sum());
+            Console.WriteLine(ns.Count());
+
         }
 
         static bool GreaterThan0(int n)

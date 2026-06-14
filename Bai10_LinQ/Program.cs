@@ -69,7 +69,7 @@ namespace Bai10_LinQ
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             var students = GetStudents();
-            Print(students);
+            Print(students.Where(s=> s.Yob >= 2000).OrderBy(s => s.Yob).OrderBy(s => s.Name));
         }
 
 
@@ -96,6 +96,18 @@ namespace Bai10_LinQ
                 {
                     Name = "Test 1",
                     City = "DA NANG CỈTY",
+                    Yob = 1995
+                },
+                new Student()
+                {
+                    Name = "Test 1",
+                    City = "DA NANG CỈTY",
+                    Yob = 1992
+                },
+                new Student()
+                {
+                    Name = "Test 1",
+                    City = "DA NANG CỈTY",
                     Yob = 2005
                 },
 
@@ -104,6 +116,19 @@ namespace Bai10_LinQ
                     Name = "Test 2",
                     City = "DA NANG CỈTY",
                     Yob = 2006
+                },
+
+                new Student()
+                {
+                    Name = "Test 7",
+                    City = "DA NANG CỈTY",
+                    Yob = 2002
+                },
+                 new Student()
+                {
+                    Name = "Test 1",
+                    City = "DA NANG CỈTY",
+                    Yob = 2002
                 },
 
                 new Student()

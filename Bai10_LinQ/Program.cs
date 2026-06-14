@@ -69,7 +69,17 @@ namespace Bai10_LinQ
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             var students = GetStudents();
-            Print(students.Where(s=> s.Yob >= 2000).OrderBy(s => s.Yob).OrderBy(s => s.Name));
+            //Print(students.Where(s=> s.Yob >= 2000).OrderBy(s => s.Yob).OrderBy(s => s.Name));
+
+            foreach (var studentName in students.OrderBy(s => s.Name).Select(s => s.Name)) 
+                {
+                Console.WriteLine(studentName);
+            }
+
+
+            //var s = GetStudents().Where(s=> s.Yob>=2000).First(); // chỉ lấy 1 phần tử đứng trước nhất
+            var s = GetStudents().Where(s => s.Yob >= 2000).Skip(1).Take(3); // lấy take là lấy số lượng phần tử 
+            Print(s);                                                          //Skip là bỏ qua phần tử số 
         }
 
 
@@ -100,13 +110,13 @@ namespace Bai10_LinQ
                 },
                 new Student()
                 {
-                    Name = "Test 1",
+                    Name = "Test 11",
                     City = "DA NANG CỈTY",
                     Yob = 1992
                 },
                 new Student()
                 {
-                    Name = "Test 1",
+                    Name = "Test 13",
                     City = "DA NANG CỈTY",
                     Yob = 2005
                 },
@@ -126,7 +136,7 @@ namespace Bai10_LinQ
                 },
                  new Student()
                 {
-                    Name = "Test 1",
+                    Name = "Test 15",
                     City = "DA NANG CỈTY",
                     Yob = 2002
                 },

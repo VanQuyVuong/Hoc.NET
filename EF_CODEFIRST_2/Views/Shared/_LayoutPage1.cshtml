@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap FULL từ Content -->
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">Company</a>
+
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/categories">Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/brand">Brand</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/product">Product</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BODY -->
+    <div class="container-fluid">
+
+
+        <div class="col-10 p-3">
+            @RenderBody()
+        </div>
+
+    </div>
+    </div>
+
+</body>
+</html>

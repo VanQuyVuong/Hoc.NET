@@ -8,6 +8,7 @@ namespace EF_CODEFIRST_2.Models
 {
     public class CompanyDBContext:DbContext
     {
+        public CompanyDBContext() : base("MyConnectionString") { }
         public DbSet<Brand> Brands { set; get; }
         public DbSet<Category> Categories { set; get; }
         public DbSet<Product> Products { set; get; }

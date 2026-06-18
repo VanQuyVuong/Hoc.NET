@@ -7,9 +7,9 @@
 
 <h2>Product</h2>
 
-<a href="/product/create">Create new Product</a>
+<a href="/Products/create">Create new Product</a>
 <form class="d-flex flex-row align-items-center flex-wrap"
-      action="/Product/Index">
+      action="/Products/Index">
     <label for="search" class=" mx-2 my-1">
         Search
     </label>
@@ -41,28 +41,28 @@
 <table class="table">
     <tr>
         <th>
-            <a href="/product/index?SortColumn=ProductID&IconClass=@iconClass&page=1">ProductID</a>
+            <a href="/Products/index?SortColumn=ProductID&IconClass=@iconClass&page=1">ProductID</a>
             @if (ViewBag.SortColumn == "ProductID")
             {
                 <i class="fa @ViewBag.IconClass "></i>
             }
         </th>
         <th>
-            <a href="/product/index?SortColumn=ProductName&IconClass=@iconClass&page=1">ProductName</a>
+            <a href="/Products/index?SortColumn=ProductName&IconClass=@iconClass&page=1">ProductName</a>
             @if (ViewBag.SortColumn == "ProductName")
             {
                 <i class="fa @ViewBag.IconClass "></i>
             }
         </th>
         <th>
-            <a href="/product/index?SortColumn=Price&IconClass=@iconClass&page=1">Price</a>
+            <a href="/Products/index?SortColumn=Price&IconClass=@iconClass&page=1">Price</a>
             @if (ViewBag.SortColumn == "Price")
             {
                 <i class="fa @ViewBag.IconClass "></i>
             }
         </th>
         <th>
-            <a href="/product/index?SortColumn=DateOfPurChase&IconClass=@iconClass&page=1">Date of purchase</a>
+            <a href="/Products/index?SortColumn=DateOfPurChase&IconClass=@iconClass&page=1">Date of purchase</a>
             @if (ViewBag.SortColumn == "Date of purchase")
             {
                 <i class="fa @ViewBag.IconClass "></i>
@@ -70,7 +70,7 @@
 
         </th>
         <th>
-            <a href="/product/index?SortColumn=AvailabilityStatus&IconClass=@iconClass&page=1">Availability Status</a>
+            <a href="/Products/index?SortColumn=AvailabilityStatus&IconClass=@iconClass&page=1">Availability Status</a>
             @if (ViewBag.SortColumn == "Availability Status")
             {
                 <i class="fa @ViewBag.IconClass "></i>
@@ -78,7 +78,7 @@
 
         </th>
         <th>
-            <a href="/product/index?SortColumn=Category&IconClass=@iconClass&page=1">Category</a>
+            <a href="/Products/index?SortColumn=Category&IconClass=@iconClass&page=1">Category</a>
             @if (ViewBag.SortColumn == "Category")
             {
                 <i class="fa @ViewBag.IconClass "></i>
@@ -86,7 +86,7 @@
 
         </th>
         <th>
-            <a href="/product/index?SortColumn=Brand&IconClass=@iconClass&page=1">Brand</a>
+            <a href="/Products/index?SortColumn=Brand&IconClass=@iconClass&page=1">Brand</a>
             @if (ViewBag.SortColumn == "Brand")
             {
                 <i class="fa @ViewBag.IconClass "></i>
@@ -94,7 +94,7 @@
 
         </th>
         <th>
-            <a href="/product/index?SortColumn=Active&IconClass=@iconClass&page=1">Active</a>
+            <a href="/Products/index?SortColumn=Active&IconClass=@iconClass&page=1">Active</a>
             @if (ViewBag.SortColumn == "Active")
             {
                 <i class="fa @ViewBag.IconClass "></i>
@@ -106,7 +106,7 @@
     {
         <tr>
             <td>@item.ProductID</td>
-            <td><a href="/product/detail/@item.ProductID">@item.ProductName</a></td>
+            <td><a href="/Products/detail/@item.ProductID">@item.ProductName</a></td>
             <td>@item.Price.Value.ToString("C")</td>
             <td>@item.DateOfPurchase</td>
             <td>@item.AvailabilityStatus</td>
@@ -114,8 +114,8 @@
             <td>@item.Brand.BrandName</td>
             <td>@item.Active</td>
             <td>
-                <a href="/product/edit/@item.ProductID">Edit</a>
-                <a href="/product/delete/@item.ProductID">Delete</a>
+                <a href="/Products/edit/@item.ProductID">Edit</a>
+                <a href="/Products/delete/@item.ProductID">Delete</a>
             </td>
         </tr>
     }
@@ -137,7 +137,7 @@
 
             <ul class="pagination justify-content-center">
                 <li class="page-item active">
-                    <a class="page-link" href="/product/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@PreviousPage">
+                    <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@PreviousPage">
                         Prev
                     </a>
                 </li>
@@ -146,7 +146,7 @@
                     if (i + 1 == ViewBag.Page)
                     {
                         <li class="page-item active">
-                            <a class="page-link" href="/product/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i + 1)">
+                            <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i + 1)">
                                 @(i + 1)
                             </a>
                         </li>
@@ -154,14 +154,14 @@
                     else
                     {
                         <li class="page-item ">
-                            <a class="page-link" href="/product/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i + 1)">
+                            <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@(i + 1)">
                                 @(i + 1)
                             </a>
                         </li>
                     }
                 }
                 <li class="page-item ">
-                    <a class="page-link" href="/product/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@NextPage">
+                    <a class="page-link" href="/Products/index?SortColumn=@ViewBag.SortColumn&IconClass=@ViewBag.IconClass&page=@NextPage">
                         Next
                     </a>
                 </li>

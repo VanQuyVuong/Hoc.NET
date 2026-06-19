@@ -1,4 +1,4 @@
-﻿using EF_CODEFIRST_2.Models;
+using EF_CODEFIRST_2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -81,6 +81,8 @@ namespace EF_CODEFIRST_2.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.Categories = db.Categories.ToList();
+            ViewBag.Brands = db.Brands.ToList();
             return View();
         }
 

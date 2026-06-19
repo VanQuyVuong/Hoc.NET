@@ -49,14 +49,34 @@
 
     <div class="row">
         <div class="col-md-6">
-            <label for="BrandID">BrandID</label>
-            <input type="number" class="form-control" id="BrandID" name="BrandID" placeholder="BrandID  " />
+            <label for="BrandID">Brand</label>
+            <select class="form-control" id="BrandID" name="BrandID">
+                <option value="">
+                    Please Select ...
+                </option>
+                @foreach (var cat in ViewBag.Brands)
+                {
+                    <option value="@cat.BrandID">
+                        @cat.BrandName
+                    </option>
+                }
 
+            </select>
         </div>
 
         <div class="col-md-6">
-            <label for="CategoryID">CategoryID</label>
-            <input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="CategoryID " />
+            <label for="CategoryID">Category</label>
+            <select class="form-control" id="CategoryID" name="CategoryID">
+                <option value="">
+                    Please Select ...   
+                </option>
+                @foreach (var cat in ViewBag.Categories)
+                {
+                <option value="@cat.CategoryID">
+                    @cat.CategoryName
+                </option>
+                }
+            </select>
 
         </div>
     </div>

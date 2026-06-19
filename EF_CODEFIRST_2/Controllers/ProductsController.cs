@@ -123,13 +123,6 @@ namespace EF_CODEFIRST_2.Controllers
             return View(product);
         }
 
-        [HttpPost]
-        public ActionResult Delete(int id, Product p)
-        {
-            Product product = db.Products.Where(row => row.ProductID == id).FirstOrDefault();
-            db.Products.Remove(product);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+        
     }
 }

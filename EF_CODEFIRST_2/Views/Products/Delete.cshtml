@@ -1,8 +1,11 @@
-﻿
+﻿@model EF_CODEFIRST_2.Models.Product
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Delete Products";
     Layout = "~/Views/Shared/_LayoutPage1.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Delete Products</h2>
 
+<form action=" /Products/delete/@Model.ProductID" method="post">
+    <input type="hidden" name="ProductID" value="@Model.ProductID" />
+</form>

@@ -8,4 +8,19 @@
 
 <form action=" /Products/delete/@Model.ProductID" method="post">
     <input type="hidden" name="ProductID" value="@Model.ProductID" />
+
+    <table class="table">
+        
+        <tr>
+            <th>Product Name</th>
+            <td>@Model.ProductName</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>@Model.Price.Value.ToString("c")</td>
+        </tr>
+        
+    </table>
+
 </form>
+

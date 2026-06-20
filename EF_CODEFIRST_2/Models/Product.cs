@@ -18,7 +18,7 @@ namespace EF_CODEFIRST_2.Models
         public Nullable<long> CategoryID { set; get; }
         public Nullable<bool> Active { set; get; }
 
-
+       // public Nullable<long> Quality { set; get; }
         public virtual Brand Brand { set; get; }
         public virtual Category Category { set; get; }
 

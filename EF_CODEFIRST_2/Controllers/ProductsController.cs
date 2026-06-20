@@ -12,7 +12,7 @@ namespace EF_CODEFIRST_2.Controllers
         CompanyDBContext db = new CompanyDBContext();
 
         // GET: Product
-        public ActionResult Index(string search = "", string SortColumn = "ProductID", string IconClass = "fa-sort-asc", int page = 1)
+        public ActionResult Index(string search = "", string SortColumn = "ProductID", string IconClass = "fa-sort-asc", int page = 1)// fs-sort-asc icon tăng dần 
         {
             //List<Product> products = db.Products.ToList();
 

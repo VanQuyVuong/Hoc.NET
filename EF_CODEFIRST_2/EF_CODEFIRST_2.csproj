@@ -136,6 +136,19 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606171137168_InitialCreate.cs" />
+    <Compile Include="Migrations\202606171137168_InitialCreate.Designer.cs">
+      <DependentUpon>202606171137168_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606201045570_AddQualityRow.cs" />
+    <Compile Include="Migrations\202606201045570_AddQualityRow.Designer.cs">
+      <DependentUpon>202606201045570_AddQualityRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202606201048548_RemoveQualityRow.cs" />
+    <Compile Include="Migrations\202606201048548_RemoveQualityRow.Designer.cs">
+      <DependentUpon>202606201048548_RemoveQualityRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CompanyDBContext.cs" />
@@ -188,7 +201,17 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202606171137168_InitialCreate.resx">
+      <DependentUpon>202606171137168_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606201045570_AddQualityRow.resx">
+      <DependentUpon>202606201045570_AddQualityRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606201048548_RemoveQualityRow.resx">
+      <DependentUpon>202606201048548_RemoveQualityRow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

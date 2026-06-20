@@ -98,6 +98,8 @@ namespace EF_CODEFIRST_2.Controllers
         public ActionResult Edit(int id)
         {
             Product product = db.Products.Where(row => row.ProductID == id).FirstOrDefault();
+            ViewBag.Categories = db.Categories.ToList();
+            ViewBag.Brands = db.Brands.ToList();
             return View(product);
         }
 

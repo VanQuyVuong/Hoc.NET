@@ -63,15 +63,47 @@
     <div class="row">
         <div class="col-md-6">
             <label for="BrandID">BrandID</label>
-            <input type="number" class="form-control" id="BrandID" name="BrandID" placeholder="BrandID  "
-                   value="@Model.BrandID" />
+            <select class="form-control" id="BrandID" name="BrandID" >
+                
+                @foreach (var cat in ViewBag.Brands)
+                {
+                    if (cat.BrandID == Model.BrandID)
+                    {
+                    <option value="@cat.BrandID" selected>
+                        @cat.BrandName
+                    </option>
+                    }
+                    else
+                    {
+                    <option value="@cat.BrandID">
+                        @cat.BrandName
+                    </option>
+                    }
+                }
+            </select>
 
         </div>
 
         <div class="col-md-6">
             <label for="CategoryID">CategoryID</label>
-            <input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="CategoryID "
-                   value="@Model.CategoryID" />
+            <select class="form-control" id="CategoryID" name="CategoryID">
+                
+                @foreach (var cat in ViewBag.Categories)
+                {
+                    if (cat.CategoryID == Model.CategoryID  )
+                    {
+                        <option value="@cat.CategoryID" selected>
+                            @cat.CategoryName
+                        </option>
+                    }
+                    else
+                    {
+                        <option value="@cat.CategoryID">
+                            @cat.CategoryName
+                        </option>
+                    }
+                }
+            </select>
 
         </div>
     </div>

@@ -148,6 +148,10 @@
     <Compile Include="Migrations\202606201048548_RemoveQualityRow.Designer.cs">
       <DependentUpon>202606201048548_RemoveQualityRow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202606201100088_AddQualityNotNull.cs" />
+    <Compile Include="Migrations\202606201100088_AddQualityNotNull.Designer.cs">
+      <DependentUpon>202606201100088_AddQualityNotNull.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
@@ -210,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202606201048548_RemoveQualityRow.resx">
       <DependentUpon>202606201048548_RemoveQualityRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202606201100088_AddQualityNotNull.resx">
+      <DependentUpon>202606201100088_AddQualityNotNull.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
